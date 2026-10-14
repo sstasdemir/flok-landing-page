@@ -48,7 +48,7 @@ export const tr: Dictionary = {
     qr: "QR bilet ekranı",
     myEvents: "Etkinliklerim listesi",
     chat: "Etkinlik sohbeti: katılımcı mesajları",
-    profile: "Profil: fotoğraf, anılar ve katıldığı etkinlikler",
+    profile: "Profil: fotoğraf, karma, anılar ve sıradaki etkinlik; takip et ya da mesaj gönder",
     organizerCreate: "Etkinlik oluşturma: kapak ve temel bilgiler",
     organizerPublished: "Etkinlik yayınlandı: WhatsApp, Instagram ve link ile paylaşım",
     organizerInfo: "Organizatör etkinlik sayfası",

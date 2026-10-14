@@ -20,7 +20,7 @@ export type Screen = {
 
 // Bump whenever the screenshots are replaced: file names stay the same and
 // GitHub Pages lets browsers cache them, so old screens would linger.
-const screensVersion = "2026-10-14g";
+const screensVersion = "2026-10-15a";
 
 const screen = (name: string) => `/images/screens/${name}.webp?v=${screensVersion}`;
 

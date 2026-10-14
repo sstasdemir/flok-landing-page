@@ -48,7 +48,7 @@ export const en: Dictionary = {
     qr: "QR ticket screen",
     myEvents: "My Events list",
     chat: "Event chat with attendee messages",
-    profile: "Profile with photo, memories and attended events",
+    profile: "Profile with photo, karma, memories and next event, plus follow and message",
     organizerCreate: "Create event: cover and basics",
     organizerPublished: "Event published, with WhatsApp, Instagram and link sharing",
     organizerInfo: "Organizer event page",
