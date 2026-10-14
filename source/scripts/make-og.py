@@ -1,6 +1,6 @@
 """Renders the 1200x630 link preview image: python3 scripts/make-og.py tr|en
 
-Needs scripts/og-phones.png from `bun scripts/capture-og-phones.ts` (not committed).
+Needs scripts/og-phones.png and og-app-store-*.png from `bun scripts/capture-og-phones.ts` (not committed).
 """
 
 import sys
@@ -80,11 +80,30 @@ for index, (line, color) in enumerate(zip(copy["lines"], (INK, FOREST, INK))):
 body = sf(25, 450)
 draw.text((x * S, 444 * S), copy["body"], font=body, fill=MUTED)
 
-pill = sf(22, 650)
+# Waitlist pill and store badges share one row, all ROW_H tall.
+ROW_H = 46
+row_top = 512
+pill = sf(21, 650)
 tw = draw.textlength(copy["pill"], font=pill)
-px, py = x * S, 512 * S
-draw.rounded_rectangle([px, py, px + tw + 48 * S, py + 50 * S], radius=25 * S, fill=FOREST)
-draw.text((px + 24 * S, py + 12 * S), copy["pill"], font=pill, fill=(255, 255, 255))
+px, py = x * S, row_top * S
+pill_right = px + tw + 44 * S
+draw.rounded_rectangle([px, py, pill_right, py + ROW_H * S], radius=ROW_H * S // 2, fill=FOREST)
+draw.text(
+    (px + 22 * S, py + ROW_H * S // 2),
+    copy["pill"],
+    font=pill,
+    fill=(255, 255, 255),
+    anchor="lm",
+)
+
+badge_x = pill_right + 16 * S
+for path in (ROOT / f"scripts/og-app-store-{locale}.png", ROOT / f"public/images/badges/google-play-{locale}.png"):
+    badge = Image.open(path).convert("RGBA")
+    badge = badge.crop(badge.getchannel("A").getbbox())
+    badge_w = round(badge.width * ROW_H * S / badge.height)
+    badge = badge.resize((badge_w, ROW_H * S), Image.LANCZOS)
+    canvas.paste(badge, (int(badge_x), py), badge)
+    badge_x += badge_w + 10 * S
 
 out = ROOT / "public/images" / copy["out"]
 canvas.resize((W, H), Image.LANCZOS).save(out, quality=90, optimize=True, progressive=True)

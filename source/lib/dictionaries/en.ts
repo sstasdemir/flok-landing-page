@@ -17,7 +17,7 @@ export const en: Dictionary = {
     description:
       "Flok brings small meetups in Istanbul, like concerts, workshops and runs, into one place. Apply, join the chat, get in with a QR code. Join the waitlist.",
     ogTitle: "Flok · Small meetups in Istanbul, all in one app",
-    ogImage: "images/og-home-en.jpg?v=6",
+    ogImage: "images/og-home-en.jpg?v=7",
     ogImageAlt: "Flok: Small meetups in Istanbul, all in one app.",
     ogLocale: "en_US",
   },

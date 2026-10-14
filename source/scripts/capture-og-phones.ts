@@ -1,4 +1,4 @@
-// Captures the hero's three phones on a transparent background for make-og.py.
+// Captures the hero's three phones on a transparent background, plus PNG App Store badges, for make-og.py.
 // Usage: bun scripts/capture-og-phones.ts [url]   (default: https://flok.ist/)
 // Re-run, then make-og.py tr && make-og.py en, whenever the hero screens change.
 import { resolve } from "node:path";
@@ -74,6 +74,18 @@ try {
   });
   await Bun.write(out, Buffer.from(shot.data, "base64"));
   console.log(out);
+
+  // PIL can't read SVG, so make-og.py gets the App Store badges rasterised here.
+  for (const locale of ["tr", "en"]) {
+    const svg = resolve(import.meta.dir, `../public/images/badges/app-store-${locale}.svg`);
+    const badgeOut = resolve(import.meta.dir, `og-app-store-${locale}.png`);
+    await send("Emulation.setDeviceMetricsOverride", { width: 200, height: 40, deviceScaleFactor: 6, mobile: false });
+    await send("Page.navigate", { url: `file://${svg}` });
+    await Bun.sleep(800);
+    const badge = await send("Page.captureScreenshot", { format: "png" });
+    await Bun.write(badgeOut, Buffer.from(badge.data, "base64"));
+    console.log(badgeOut);
+  }
   ws.close();
 } finally {
   chrome.kill();

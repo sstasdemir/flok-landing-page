@@ -4,7 +4,7 @@ source/out/
 source/.env
 source/.env.local
 source/*.tsbuildinfo
-source/scripts/og-phones.png
+source/scripts/og-*.png
 .DS_Store
 *.tmp-*
 .tmp-*.png
