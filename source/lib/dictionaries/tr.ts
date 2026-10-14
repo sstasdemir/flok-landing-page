@@ -50,7 +50,7 @@ export const tr: Dictionary = {
     chat: "Etkinlik sohbeti: katılımcı mesajları",
     profile: "Profil: fotoğraf, anılar ve katıldığı etkinlikler",
     organizerCreate: "Etkinlik oluşturma: kapak ve temel bilgiler",
-    organizerPublished: "Etkinlik yayınlandı: paylaşım posteri",
+    organizerPublished: "Etkinlik yayınlandı: WhatsApp, Instagram ve link ile paylaşım",
     organizerInfo: "Organizatör etkinlik sayfası",
     organizer: "Organizatör paneli: başvurular ve kapı",
     organizerChat: "Organizatör etkinlik sohbeti",
@@ -154,7 +154,7 @@ export const tr: Dictionary = {
       {
         label: "Yayınla",
         title: "Yayında, paylaşmaya hazır.",
-        body: "Etkinliğin yakındaki katılımcılara görünür. Hazır posterini paylaş, ilk başvurular gelsin.",
+        body: "Etkinliğin yakındaki katılımcılara görünür. WhatsApp'tan, Instagram'dan ya da linkle paylaş, ilk başvurular gelsin.",
         screen: "organizerPublished",
       },
       {

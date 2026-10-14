@@ -50,7 +50,7 @@ export const en: Dictionary = {
     chat: "Event chat with attendee messages",
     profile: "Profile with photo, memories and attended events",
     organizerCreate: "Create event: cover and basics",
-    organizerPublished: "Event published with share poster",
+    organizerPublished: "Event published, with WhatsApp, Instagram and link sharing",
     organizerInfo: "Organizer event page",
     organizer: "Organizer dashboard: applications and door",
     organizerChat: "Organizer event chat",
@@ -154,7 +154,7 @@ export const en: Dictionary = {
       {
         label: "Publish",
         title: "Live and ready to share.",
-        body: "Your event shows up for people nearby. Share the ready-made poster and watch the first applications come in.",
+        body: "Your event shows up for people nearby. Share it on WhatsApp, Instagram or with a link and watch the first applications come in.",
         screen: "organizerPublished",
       },
       {
