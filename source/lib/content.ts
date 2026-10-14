@@ -18,20 +18,26 @@ export type Screen = {
   alt: string;
 };
 
+// Bump whenever the screenshots are replaced: file names stay the same and
+// GitHub Pages lets browsers cache them, so old screens would linger.
+const screensVersion = "2026-10-14";
+
+const screen = (name: string) => `/images/screens/${name}.webp?v=${screensVersion}`;
+
 const screenSources: Record<ScreenKey, string> = {
-  discover: "/images/screens/discover.webp",
-  map: "/images/screens/map.webp",
-  detail: "/images/screens/detail.webp",
-  chat: "/images/screens/chat.webp",
-  qr: "/images/screens/qr.webp",
-  organizer: "/images/screens/organizer.webp",
-  profile: "/images/screens/profile.webp",
-  myEvents: "/images/screens/my-events.webp",
-  welcome: "/images/screens/welcome.webp",
-  organizerCreate: "/images/screens/organizer-create.webp",
-  organizerPublished: "/images/screens/organizer-published.webp",
-  organizerInfo: "/images/screens/organizer-info.webp",
-  organizerChat: "/images/screens/organizer-chat.webp",
+  discover: screen("discover"),
+  map: screen("map"),
+  detail: screen("detail"),
+  chat: screen("chat"),
+  qr: screen("qr"),
+  organizer: screen("organizer"),
+  profile: screen("profile"),
+  myEvents: screen("my-events"),
+  welcome: screen("welcome"),
+  organizerCreate: screen("organizer-create"),
+  organizerPublished: screen("organizer-published"),
+  organizerInfo: screen("organizer-info"),
+  organizerChat: screen("organizer-chat"),
 };
 
 export function resolveScreen(key: ScreenKey, alts: Record<ScreenKey, string>): Screen {
