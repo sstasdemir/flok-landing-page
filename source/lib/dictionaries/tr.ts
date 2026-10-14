@@ -1,6 +1,8 @@
 import type { Dictionary } from "@/lib/dictionaries/types";
 
 const ids = {
+  story: "nasil",
+  organizers: "organizatorler",
   trust: "guven",
   categories: "kategoriler",
   eventDay: "etkinlik-gunu",
@@ -25,6 +27,8 @@ export const tr: Dictionary = {
     cta: "Ön kayıt oluştur",
     languageLabel: "Dil",
     links: [
+      { id: ids.story, label: "Nasıl çalışır" },
+      { id: ids.organizers, label: "Organizatörler" },
       { id: ids.trust, label: "Güven" },
       { id: ids.faq, label: "SSS" },
     ],
@@ -36,6 +40,7 @@ export const tr: Dictionary = {
     support: "Destek",
     cookies: "Çerez tercihleri",
   },
+  carousel: { previous: "Önceki ekran", next: "Sonraki ekran" },
   hero: {
     srOnly: "Yakındaki insanlar ve etkinlikler, tek uygulamada.",
     before: "Yakındaki",
@@ -56,10 +61,102 @@ export const tr: Dictionary = {
     ],
     lead: "İstanbul'daki konser, atölye, koşu, stand-up… Her yere dağılmış küçük buluşmaları Flok tek yerde toplar. Başvurursun, sohbete katılırsın, kapıda QR ile girersin.",
     leadHighlight: "İstanbul'daki",
+    stageLabel: "Flok uygulama ekranları",
     scrollCue: "Aşağı kaydır",
     storeBadges: [
       { src: "/images/badges/app-store-tr.svg", alt: "App Store'dan indirin", width: 151.29, height: 40 },
       { src: "/images/badges/google-play-tr.png", alt: "Google Play'den indirin", width: 134.58, height: 40 },
+    ],
+  },
+  story: {
+    id: ids.story,
+    eyebrow: "Nasıl çalışır",
+    title: ["Keşfetmekten kendi etkinliğine,", "on adımda Flok."],
+    regionLabel: "Flok ekranları, yatay kaydır",
+    steps: [
+      {
+        label: "Keşfet",
+        title: "Yakınında ne var, tek bakışta gör.",
+        body: "Öne çıkanlar, sana göre seçilenler ve yaklaşan etkinlikler tek akışta. Kaç kişinin katıldığını ve kaç yer kaldığını hemen görürsün.",
+      },
+      {
+        label: "Haritada bul",
+        title: "Etkinlikleri haritada, mahalle mahalle.",
+        body: "Hangi buluşmanın sana yürüme mesafesinde olduğunu haritadan gör. Pine dokun, etkinliğin kartı altta açılsın.",
+      },
+      {
+        label: "Katıl",
+        title: "Her detay tek ekranda, katılmak tek dokunuş.",
+        body: "Saat, yer, hava durumu, kurallar ve katılımcılar. Takvimine ekle, arkadaşını davet et, yol tarifini al.",
+      },
+      {
+        label: "Kapıda gir",
+        title: "Biletin cebinde, giriş saniyeler sürer.",
+        body: "Onaylandığında QR biletin uygulamada hazır olur. Kapıda göster, düzenleyen okutsun, içeridesin.",
+      },
+      {
+        label: "Sohbet",
+        title: "Katılımcılarla tek yerde konuş.",
+        body: "Her etkinliğin kendi sohbeti var. Düzenleyen duyuru paylaşır, katılımcılar nerede buluşacağını konuşur.",
+      },
+      {
+        label: "Anılar",
+        title: "Her buluşma profilinde bir anı.",
+        body: "Etkinlikten sonra fotoğrafları ekle. Katılanlar görür, beğenir; her katılımla karma puanın büyür.",
+      },
+      {
+        label: "Düzenle",
+        title: "Sıra sende: kendi etkinliğini aç.",
+        body: "Yer, saat, kontenjan ve kuralları gir, yayınla. Başvuruları onayla, kapıda biletleri tara, doluluğu tek panelden izle.",
+      },
+      {
+        label: "Etkinliklerim",
+        title: "Planların tek listede.",
+        body: "Sıradaki etkinliğin en üstte; biletine, sohbetine ve yol tarifine tek dokunuşla ulaş. Katılacakların, oluşturdukların ve geçmişin ayrı sekmelerde.",
+      },
+      {
+        label: "Oluştur",
+        title: "Adım adım etkinlik oluştur.",
+        body: "Kapak, kategori, tarih, kontenjan ve kurallar. Her adım tek ekranda, sonunda tek dokunuşla yayınla.",
+      },
+      {
+        label: "Hemen başla",
+        title: "Saniyeler içinde içeridesin.",
+        body: "Apple, Google ya da e-postanla giriş yap; ilgi alanlarını seç, yakınındaki etkinlikler hazır.",
+      },
+    ],
+  },
+  organizers: {
+    id: ids.organizers,
+    eyebrow: "Kendi etkinliğin",
+    title: ["Organizatörler için Flok."],
+    regionLabel: "Organizatör ekranları, yatay kaydır",
+    steps: [
+      {
+        label: "Oluştur",
+        title: "Etkinliğini dakikalar içinde aç.",
+        body: "Kapak, kategori, tarih, kontenjan ve kurallar; adım adım ilerle, sonunda tek dokunuşla yayınla.",
+      },
+      {
+        label: "Yayınla",
+        title: "Yayında, paylaşmaya hazır.",
+        body: "Etkinliğin yakındaki katılımcılara görünür. Hazır posterini paylaş, ilk başvurular gelsin.",
+      },
+      {
+        label: "Etkinlik sayfası",
+        title: "Etkinlik sayfan, senin vitrinin.",
+        body: "Konum, akış, kurallar ve katılımcılar tek sayfada. Gelecek herkesin bilmesi gereken her şey burada.",
+      },
+      {
+        label: "Yönet",
+        title: "Başvuruları onayla, kapıyı yönet.",
+        body: "Kimin geleceğine sen karar ver; bekleme listesi otomatik işler. Kapıda QR okut, doluluğu canlı izle.",
+      },
+      {
+        label: "Duyuru yap",
+        title: "Katılımcılarına tek mesajla ulaş.",
+        body: "Etkinlik sohbetinde duyuru paylaş, soruları yanıtla. Herkes aynı bilgiyle gelsin.",
+      },
     ],
   },
   trust: {

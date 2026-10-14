@@ -1,6 +1,8 @@
 import type { Dictionary } from "@/lib/dictionaries/types";
 
 const ids = {
+  story: "how-it-works",
+  organizers: "organizers",
   trust: "trust",
   categories: "categories",
   eventDay: "event-day",
@@ -25,6 +27,8 @@ export const en: Dictionary = {
     cta: "Join the waitlist",
     languageLabel: "Language",
     links: [
+      { id: ids.story, label: "How it works" },
+      { id: ids.organizers, label: "Organizers" },
       { id: ids.trust, label: "Trust" },
       { id: ids.faq, label: "FAQ" },
     ],
@@ -36,6 +40,7 @@ export const en: Dictionary = {
     support: "Support",
     cookies: "Cookie preferences",
   },
+  carousel: { previous: "Previous screen", next: "Next screen" },
   hero: {
     srOnly: "Nearby people and events, all in one app.",
     before: "Nearby",
@@ -56,10 +61,102 @@ export const en: Dictionary = {
     ],
     lead: "Concerts, workshops, runs, stand-up in Istanbul… Flok brings scattered small meetups into one place. Apply, join the chat and get in at the door with a QR code.",
     leadHighlight: "Istanbul",
+    stageLabel: "Flok app screens",
     scrollCue: "Scroll down",
     storeBadges: [
       { src: "/images/badges/app-store-en.svg", alt: "Download on the App Store", width: 119.66, height: 40 },
       { src: "/images/badges/google-play-en.png", alt: "Get it on Google Play", width: 134.29, height: 40 },
+    ],
+  },
+  story: {
+    id: ids.story,
+    eyebrow: "How it works",
+    title: ["From discovering to hosting your own,", "Flok in ten steps."],
+    regionLabel: "Flok screens, scroll horizontally",
+    steps: [
+      {
+        label: "Discover",
+        title: "See what's nearby at a glance.",
+        body: "Featured picks, recommendations for you and upcoming events in one feed. See how many people are going and how many spots are left.",
+      },
+      {
+        label: "Find on the map",
+        title: "Events on the map, block by block.",
+        body: "See which meetups are within walking distance. Tap a pin and the event card slides up.",
+      },
+      {
+        label: "Join",
+        title: "Every detail on one screen, one tap to join.",
+        body: "Time, place, weather, rules and who's going. Add it to your calendar, invite a friend, get directions.",
+      },
+      {
+        label: "Get in",
+        title: "Your ticket's in your pocket, check-in takes seconds.",
+        body: "Once you're approved, your QR ticket is ready in the app. Show it at the door, the organizer scans it, you're in.",
+      },
+      {
+        label: "Chat",
+        title: "Talk to everyone in one place.",
+        body: "Every event has its own chat. Organizers post announcements, attendees figure out where to meet.",
+      },
+      {
+        label: "Memories",
+        title: "Every meetup becomes a memory on your profile.",
+        body: "Add photos after the event. Attendees see them and like them, and every event you attend grows your karma score.",
+      },
+      {
+        label: "Host",
+        title: "Your turn: start your own event.",
+        body: "Set the place, time, capacity and rules, then publish. Approve applications, scan tickets at the door and track capacity from one dashboard.",
+      },
+      {
+        label: "My Events",
+        title: "All your plans in one list.",
+        body: "Your next event sits at the top, with your ticket, chat and directions one tap away. Events you're attending, hosting and have attended live in separate tabs.",
+      },
+      {
+        label: "Create",
+        title: "Create an event step by step.",
+        body: "Cover, category, date, capacity and rules. One step per screen, then publish with a single tap.",
+      },
+      {
+        label: "Get started",
+        title: "You're in within seconds.",
+        body: "Sign in with Apple, Google or email, pick your interests and nearby events are ready.",
+      },
+    ],
+  },
+  organizers: {
+    id: ids.organizers,
+    eyebrow: "Your own event",
+    title: ["Flok for organizers."],
+    regionLabel: "Organizer screens, scroll horizontally",
+    steps: [
+      {
+        label: "Create",
+        title: "Launch your event in minutes.",
+        body: "Cover, category, date, capacity and rules. Go step by step, then publish with a single tap.",
+      },
+      {
+        label: "Publish",
+        title: "Live and ready to share.",
+        body: "Your event shows up for people nearby. Share the ready-made poster and watch the first applications come in.",
+      },
+      {
+        label: "Event page",
+        title: "Your event page is your storefront.",
+        body: "Location, schedule, rules and attendees on one page. Everything your guests need to know, in one place.",
+      },
+      {
+        label: "Manage",
+        title: "Approve applications, run the door.",
+        body: "You decide who comes; the waitlist runs itself. Scan QR codes at the door and watch capacity live.",
+      },
+      {
+        label: "Announce",
+        title: "Reach every attendee with one message.",
+        body: "Post announcements in the event chat and answer questions. Everyone arrives with the same information.",
+      },
     ],
   },
   trust: {

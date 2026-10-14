@@ -6,10 +6,24 @@ export type FeatureCopy = {
   body: string;
 };
 
+export type StepCopy = {
+  label: string;
+  title: string;
+  body: string;
+};
+
 export type SectionCopy = {
   eyebrow: string;
   title: string;
   description: string;
+};
+
+export type CarouselCopy = {
+  id: string;
+  eyebrow: string;
+  title: [string, string?];
+  regionLabel: string;
+  steps: StepCopy[];
 };
 
 export type WaitlistCopy = {
@@ -55,6 +69,7 @@ export type Dictionary = {
   };
   header: HeaderCopy;
   footer: { legalLabel: string; privacy: string; terms: string; support: string; cookies: string };
+  carousel: { previous: string; next: string };
   hero: {
     srOnly: string;
     before: string;
@@ -65,11 +80,14 @@ export type Dictionary = {
     lead: string;
     /** Substring of `lead` rendered in bold ink, e.g. the city name. Must appear in `lead` verbatim. */
     leadHighlight: string;
+    stageLabel: string;
     /** Accessible label of the desktop "scroll down" cue at the bottom of the hero. */
     scrollCue: string;
     /** Official App Store and Google Play badges for this locale, in display order. Shown as plain images, not links. */
     storeBadges: StoreBadge[];
   };
+  story: CarouselCopy;
+  organizers: CarouselCopy;
   trust: SectionCopy & { id: string; points: FeatureCopy[] };
   categories: SectionCopy & {
     id: string;
