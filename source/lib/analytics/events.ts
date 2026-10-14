@@ -8,8 +8,6 @@ import type { Locale } from "@/lib/i18n";
 /** Locale-neutral section keys, so TR and EN pages report the same values. */
 export type SectionKey =
   | "hero"
-  | "how_it_works"
-  | "organizers"
   | "trust"
   | "categories"
   | "event_day"

@@ -47,7 +47,7 @@ export function ScrollCue({ href, label }: { href: string; label: string }) {
       title={label}
       aria-hidden={scrolled || undefined}
       tabIndex={scrolled ? -1 : undefined}
-      {...trackAttrs("cta_clicked", { button: "hero_scroll_cue", section: "hero", target: "how_it_works" })}
+      {...trackAttrs("cta_clicked", { button: "hero_scroll_cue", section: "hero", target: "trust" })}
       className={cn(
         "absolute bottom-1 left-1/2 hidden -translate-x-1/2 rounded-full p-2 text-mute/70 transition-[opacity,color] duration-300 hover:text-ink",
         fits && "lg:block",

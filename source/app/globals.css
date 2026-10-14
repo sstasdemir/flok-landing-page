@@ -19,7 +19,6 @@
   --font-logo: var(--font-titan), ui-rounded, system-ui, sans-serif;
 
   --shadow-soft: 0 1px 2px rgb(18 20 18 / 0.04), 0 12px 32px -12px rgb(18 20 18 / 0.12);
-  --shadow-phone: 0 2px 4px rgb(18 20 18 / 0.06), 0 32px 64px -24px rgb(15 31 24 / 0.35);
 
   --animate-rise: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
   @keyframes rise {

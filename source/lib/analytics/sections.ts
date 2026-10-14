@@ -7,8 +7,6 @@ export function sectionKeysById(locale: Locale): Record<string, SectionKey> {
   const dict = getDictionary(locale);
   return {
     top: "hero",
-    [dict.story.id]: "how_it_works",
-    [dict.organizers.id]: "organizers",
     [dict.trust.id]: "trust",
     [dict.categories.id]: "categories",
     [dict.eventDay.id]: "event_day",
