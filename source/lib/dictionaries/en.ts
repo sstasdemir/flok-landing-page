@@ -44,11 +44,11 @@ export const en: Dictionary = {
     welcome: "Sign-in screen: Apple, Google or email",
     discover: "Discover feed: nearby events",
     map: "Map view: event pins",
-    detail: "Event detail with Join button at the top",
+    detail: "Event detail with cover image and Join button",
     qr: "QR ticket screen",
     myEvents: "My Events list",
     chat: "Event chat with attendee messages",
-    profile: "Profile with photos from attended events",
+    profile: "Profile with photo, memories and attended events",
     organizerCreate: "Create event: cover and basics",
     organizerPublished: "Event published with share poster",
     organizerInfo: "Organizer event page",
@@ -110,7 +110,7 @@ export const en: Dictionary = {
       {
         label: "Join",
         title: "Join with one tap.",
-        body: "Time, place, rules and attendees on one screen. Tap Join at the top to apply; your ticket is ready once you're approved.",
+        body: "Cover, time, place and rules on one screen. Tap Join at the bottom to apply; your ticket is ready once you're approved.",
         screen: "detail",
       },
       {

@@ -44,11 +44,11 @@ export const tr: Dictionary = {
     welcome: "Giriş ekranı: Apple, Google veya e-posta ile kayıt",
     discover: "Keşfet akışı: yakındaki etkinlikler",
     map: "Harita görünümü: etkinlik pinleri",
-    detail: "Etkinlik detayı: üstte Etkinliğe katıl düğmesi",
+    detail: "Etkinlik detayı: kapak görseli ve katıl düğmesi",
     qr: "QR bilet ekranı",
     myEvents: "Etkinliklerim listesi",
     chat: "Etkinlik sohbeti: katılımcı mesajları",
-    profile: "Profil: katıldığı etkinlikten fotoğraflar",
+    profile: "Profil: fotoğraf, anılar ve katıldığı etkinlikler",
     organizerCreate: "Etkinlik oluşturma: kapak ve temel bilgiler",
     organizerPublished: "Etkinlik yayınlandı: paylaşım posteri",
     organizerInfo: "Organizatör etkinlik sayfası",
@@ -110,7 +110,7 @@ export const tr: Dictionary = {
       {
         label: "Katıl",
         title: "Etkinliğe katıl, tek dokunuş.",
-        body: "Saat, yer, kurallar ve katılımcılar tek ekranda. En üstteki Etkinliğe katıl ile başvur; onaylandığında bilet hazır.",
+        body: "Kapak, saat, yer ve kurallar tek ekranda. Alttaki Etkinliğe katıl ile başvur; onaylandığında bilet hazır.",
         screen: "detail",
       },
       {
