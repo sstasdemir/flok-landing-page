@@ -52,7 +52,7 @@ export const tr: Dictionary = {
     organizerCreate: "Etkinlik oluşturma: kapak ve temel bilgiler",
     organizerPublished: "Etkinlik yayınlandı: WhatsApp, Instagram ve link ile paylaşım",
     organizerInfo: "Organizatör etkinlik sayfası",
-    organizer: "Organizatör paneli: başvurular ve kapı",
+    organizer: "Organizatör paneli: bekleyen başvurular, bekleme listesi ve onaylı katılımcılar",
     organizerChat: "Organizatör etkinlik sohbeti",
   },
   carousel: { previous: "Önceki ekran", next: "Sonraki ekran" },

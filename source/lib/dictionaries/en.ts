@@ -52,7 +52,7 @@ export const en: Dictionary = {
     organizerCreate: "Create event: cover and basics",
     organizerPublished: "Event published, with WhatsApp, Instagram and link sharing",
     organizerInfo: "Organizer event page",
-    organizer: "Organizer dashboard: applications and door",
+    organizer: "Organizer dashboard: pending applications, waitlist and approved attendees",
     organizerChat: "Organizer event chat",
   },
   carousel: { previous: "Previous screen", next: "Next screen" },
