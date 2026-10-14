@@ -20,7 +20,7 @@ export type Screen = {
 
 // Bump whenever the screenshots are replaced: file names stay the same and
 // GitHub Pages lets browsers cache them, so old screens would linger.
-const screensVersion = "2026-10-14e";
+const screensVersion = "2026-10-14f";
 
 const screen = (name: string) => `/images/screens/${name}.webp?v=${screensVersion}`;
 
@@ -35,8 +35,7 @@ const screenSources: Record<ScreenKey, string> = {
   myEvents: screen("my-events"),
   welcome: screen("welcome"),
   organizerCreate: screen("organizer-create"),
-  // Unique filename so CDNs/browsers cannot keep serving a cached published frame.
-  organizerPublished: `/images/screens/organizer-published-20261014.webp?v=${screensVersion}`,
+  organizerPublished: screen("organizer-published"),
   organizerInfo: screen("organizer-info"),
   organizerChat: screen("organizer-chat"),
 };

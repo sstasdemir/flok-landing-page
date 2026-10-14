@@ -1,4 +1,7 @@
-"""Renders the 1200x630 link preview image: python3 scripts/make-og.py tr|en"""
+"""Renders the 1200x630 link preview image: python3 scripts/make-og.py tr|en
+
+Needs scripts/og-phones.png from `bun scripts/capture-og-phones.ts` (not committed).
+"""
 
 import sys
 from pathlib import Path
@@ -42,14 +45,24 @@ def sf(size, weight):
     return font
 
 
-# Soft mint disc — atmosphere only, no phone frames or app screenshots.
-disc = 720
-disc_left = W - disc * 0.55
-disc_top = H * 0.5 - disc * 0.42
+# The hero's three phones (scripts/capture-og-phones.ts) on the same mint disc as the site.
+phones = Image.open(ROOT / "scripts/og-phones.png").convert("RGBA")
+phones = phones.crop(phones.getchannel("A").getbbox())
+# Clear of the longest headline line; the group bleeds a little off the right and bottom edges.
+phones_h = 580
+phones_w = round(phones.width * phones_h / phones.height)
+phones_left = 630
+phones_top = H - phones_h + 36
+
+disc = phones_w * 1.04
+disc_left = phones_left + (phones_w - disc) / 2
+disc_top = phones_top + phones_h * 0.5 - disc * 0.42
 draw.ellipse(
     [disc_left * S, disc_top * S, (disc_left + disc) * S, (disc_top + disc) * S],
     fill=MINT_SOFT,
 )
+phones = phones.resize((phones_w * S, phones_h * S), Image.LANCZOS)
+canvas.paste(phones, (phones_left * S, phones_top * S), phones)
 
 x = 72
 titan = ImageFont.truetype(str(ROOT / "app/fonts/TitanOne-Regular.ttf"), 46 * S)

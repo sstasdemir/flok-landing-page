@@ -17,7 +17,7 @@ export const tr: Dictionary = {
     description:
       "Flok, İstanbul'daki konser, atölye, koşu gibi küçük buluşmaları tek yerde toplar. Başvur, sohbete katıl, kapıda QR ile gir. Ön kayıt açık.",
     ogTitle: "Flok · İstanbul'daki küçük buluşmalar, tek uygulamada",
-    ogImage: "images/og-home.jpg?v=5",
+    ogImage: "images/og-home.jpg?v=6",
     ogImageAlt: "Flok: İstanbul'daki küçük buluşmalar, tek uygulamada.",
     ogLocale: "tr_TR",
   },
