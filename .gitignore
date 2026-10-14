@@ -5,3 +5,5 @@ source/.env
 source/.env.local
 source/*.tsbuildinfo
 .DS_Store
+*.tmp-*
+.tmp-*.png
