@@ -7,3 +7,4 @@ source/*.tsbuildinfo
 .DS_Store
 *.tmp-*
 .tmp-*.png
+assets/
