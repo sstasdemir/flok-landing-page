@@ -2,6 +2,7 @@ import { WordRotate } from "@/components/magicui/word-rotate";
 import { HeroStage } from "@/components/site/hero-stage";
 import { ScrollCue } from "@/components/site/scroll-cue";
 import { WaitlistForm } from "@/components/site/waitlist-form";
+import { resolveScreen } from "@/lib/content";
 import { getDictionary, routes, type Locale } from "@/lib/i18n";
 
 const delay = (seconds: number) => ({ animationDelay: `${seconds}s` });
@@ -19,7 +20,12 @@ function Highlighted({ text, highlight }: { text: string; highlight: string }) {
 }
 
 export function Hero({ locale }: { locale: Locale }) {
-  const { hero, story, waitlist } = getDictionary(locale);
+  const { hero, screens, story, waitlist } = getDictionary(locale);
+  const stageScreens = {
+    back: resolveScreen("map", screens),
+    side: resolveScreen("welcome", screens),
+    front: resolveScreen("discover", screens),
+  };
 
   return (
     // Desktop: the hero fills the viewport below the 4rem sticky header, so the next section starts below the
@@ -52,7 +58,7 @@ export function Hero({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <HeroStage label={hero.stageLabel} badges={hero.storeBadges} />
+        <HeroStage label={hero.stageLabel} screens={stageScreens} badges={hero.storeBadges} />
       </div>
 
       <ScrollCue href={`#${story.id}`} label={hero.scrollCue} />

@@ -9,6 +9,7 @@ import { SectionAnchors } from "@/components/site/section-anchors";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
 import { Trust } from "@/components/site/trust";
+import { resolveScreen } from "@/lib/content";
 import type { CarouselCopy } from "@/lib/dictionaries/types";
 import { getDictionary, otherLocale, routes, type Locale } from "@/lib/i18n";
 
@@ -17,6 +18,7 @@ export function LandingPage({ locale }: { locale: Locale }) {
   const carousel = (copy: CarouselCopy) => ({
     ...copy,
     labels: dict.carousel,
+    steps: copy.steps.map((step) => ({ ...step, screen: resolveScreen(step.screen, dict.screens) })),
   });
 
   return (

@@ -3,6 +3,7 @@
 import { useEffect, type ReactNode } from "react";
 import { motion, useMotionValue, useReducedMotion, useSpring, useTransform, type MotionValue } from "motion/react";
 import { Iphone } from "@/components/magicui/iphone";
+import type { Screen } from "@/lib/content";
 import type { StoreBadge } from "@/lib/dictionaries/types";
 import { asset } from "@/lib/utils";
 
@@ -14,10 +15,11 @@ function useDepth(pointer: MotionValue<number>, depth: number, range: number) {
 
 type HeroStageProps = {
   label: string;
+  screens: { back: Screen; side: Screen; front: Screen };
   badges: StoreBadge[];
 };
 
-export function HeroStage({ label, badges }: HeroStageProps) {
+export function HeroStage({ label, screens, badges }: HeroStageProps) {
   const reduceMotion = useReducedMotion();
   const rawX = useMotionValue(0);
   const rawY = useMotionValue(0);
@@ -54,19 +56,19 @@ export function HeroStage({ label, badges }: HeroStageProps) {
 
         <motion.div style={{ x: backX, y: backY }} className="absolute top-[14%] left-[2%] w-[38%]">
           <PhoneEntrance delay={0.3} rotate={-9} fromX="55%" reduceMotion={reduceMotion}>
-            <Iphone />
+            <Iphone src={asset(screens.back.src)} alt={screens.back.alt} />
           </PhoneEntrance>
         </motion.div>
 
         <motion.div style={{ x: backX, y: backY }} className="absolute top-[14%] right-[2%] w-[38%]">
           <PhoneEntrance delay={0.4} rotate={9} fromX="-55%" reduceMotion={reduceMotion}>
-            <Iphone />
+            <Iphone src={asset(screens.side.src)} alt={screens.side.alt} />
           </PhoneEntrance>
         </motion.div>
 
         <motion.div style={{ x: frontX, y: frontY }} className="relative z-10 w-[48%]">
           <PhoneEntrance delay={0.15} fromY={90} fromScale={0.9} reduceMotion={reduceMotion}>
-            <Iphone priority />
+            <Iphone src={asset(screens.front.src)} alt={screens.front.alt} priority />
           </PhoneEntrance>
         </motion.div>
       </div>

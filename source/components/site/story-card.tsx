@@ -1,10 +1,13 @@
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Iphone } from "@/components/magicui/iphone";
+import type { Screen } from "@/lib/content";
+import { asset } from "@/lib/utils";
 
 export type StoryStep = {
   label: string;
   title: string;
   body: string;
+  screen: Screen;
 };
 
 export function StoryCard({ step, index }: { step: StoryStep; index: number }) {
@@ -13,7 +16,7 @@ export function StoryCard({ step, index }: { step: StoryStep; index: number }) {
       <BlurFade delay={0.06 * index}>
         <div className="rounded-3xl bg-mint-soft px-[17%] py-8 ring-1 ring-mint/40">
           <div className="drop-shadow-[var(--shadow-phone)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-y-2">
-            <Iphone priority={index === 0} />
+            <Iphone src={asset(step.screen.src)} alt={step.screen.alt} priority={index === 0} />
           </div>
         </div>
         <div className="px-1 pt-5">

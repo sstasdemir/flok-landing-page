@@ -1,3 +1,4 @@
+import type { ScreenKey } from "@/lib/content";
 import type { IconKey } from "@/lib/icons";
 
 export type FeatureCopy = {
@@ -10,6 +11,7 @@ export type StepCopy = {
   label: string;
   title: string;
   body: string;
+  screen: ScreenKey;
 };
 
 export type SectionCopy = {
@@ -69,6 +71,7 @@ export type Dictionary = {
   };
   header: HeaderCopy;
   footer: { legalLabel: string; privacy: string; terms: string; support: string; cookies: string };
+  screens: Record<ScreenKey, string>;
   carousel: { previous: string; next: string };
   hero: {
     srOnly: string;
