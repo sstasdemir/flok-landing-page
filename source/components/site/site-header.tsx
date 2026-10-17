@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { FlokLogo } from "@/components/site/flok-logo";
 import { LanguageSwitcher } from "@/components/site/language-switcher";
 import { StickyHeader } from "@/components/site/sticky-header";
 import { trackAttrs } from "@/lib/analytics/events";
@@ -19,8 +20,8 @@ export function SiteHeader({ locale, alternateHref }: SiteHeaderProps) {
   return (
     <StickyHeader>
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-6">
-        <Link href={home} aria-label={header.homeLabel} className="font-logo text-3xl leading-none text-forest">
-          flok
+        <Link href={home} aria-label={header.homeLabel} className="inline-flex text-3xl leading-none text-forest">
+          <FlokLogo />
         </Link>
         <nav aria-label={header.navLabel} className="hidden items-center gap-1 lg:flex">
           {header.links.map((link) => (
